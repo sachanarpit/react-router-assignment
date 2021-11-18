@@ -1,8 +1,10 @@
 import { Route, Switch } from "react-router-dom";
+import { Navbar } from "./Navbar";
 
 export const Routes = () => {
   return (
     <>
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <h1>Home</h1>
