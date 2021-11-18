@@ -8,7 +8,7 @@ export const Routes = () => {
           <h1>Home</h1>
         </Route>
 
-        <Route path="/products">
+        <Route exact path="/products">
           <h1>Products</h1>
         </Route>
 
