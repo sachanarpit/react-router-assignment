@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import { Product } from "../components/SingleProduct";
 import { Navbar } from "./Navbar";
 
 export const Routes = () => {
@@ -15,7 +16,7 @@ export const Routes = () => {
         </Route>
 
         <Route path="/products/:id">
-          <h1>Single Product</h1>
+          <Product />
         </Route>
         <Route>
           <h1>Page not found</h1>
