@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import { ProductPage } from "../components/Products";
 import { Product } from "../components/SingleProduct";
 import { Navbar } from "./Navbar";
 
@@ -12,7 +13,7 @@ export const Routes = () => {
         </Route>
 
         <Route exact path="/products">
-          <h1>Products</h1>
+          <ProductPage />
         </Route>
 
         <Route path="/products/:id">

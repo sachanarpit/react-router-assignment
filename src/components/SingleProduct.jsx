@@ -4,19 +4,28 @@ import { useParams } from "react-router";
 
 export const Product = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState("");
 
   useEffect(() => {
     axios
       .get("http://localhost:3005/products/" + id)
       .then((res) => setProduct(res.data));
   }, [id]);
-  return (
-    <div>
+  console.log(product);
+  if (product) {
+    return (
       <div>
-        <h1>{product?.name}</h1>
-        <p>{product?.price}</p>
+        <div>
+          <h1>{product?.name}</h1>
+          <p>{product?.price}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div>
+        <h1>page not found</h1>
+      </div>
+    );
+  }
 };
