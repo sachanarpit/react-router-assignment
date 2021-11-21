@@ -24,7 +24,7 @@ export const Product = () => {
   } else {
     return (
       <div>
-        <h1>page not found</h1>
+        <h1>product not found</h1>
       </div>
     );
   }
